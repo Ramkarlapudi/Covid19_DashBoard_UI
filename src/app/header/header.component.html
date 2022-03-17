@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<style>
+body {
+   font-family: Arial, Helvetica, sans-serif;
+   margin: 0;
+}
+nav {
+   overflow: hidden;
+   background-color: rgb(0, 52, 73);
+}
+nav .links {
+   float: left;
+   font-size: 16px;
+   color: white;
+   text-align: center;
+   padding: 14px 16px;
+   text-decoration: none;
+}
+.subnav {
+   float: left;
+   overflow: hidden;
+}
+.subnav .sub-btn {
+   font-size: 16px;
+   border: none;
+   outline: none;
+   color: white;
+   padding: 14px 16px;
+   background-color: rgb(0, 109, 67);
+   margin: 0;
+}
+nav .links:hover,
+.subnav:hover .sub-btn {
+   background-color: rgb(101, 219, 255);
+   color: black;
+   font-weight: bolder;
+}
+.sub-content {
+   display: none;
+   position: absolute;
+   left: 0;
+   background-color: rgb(0, 156, 83);
+   width: 100%;
+   z-index: 1;
+}
+.sub-content a {
+   float: left;
+   color: white;
+   text-decoration: none;
+}
+.sub-content a:hover {
+   background-color: #eee;
+   color: black;
+}
+.subnav:hover .sub-content {
+   display: block;
+}
+.right {
+    text-align: right;
+    float: right;
+   font-size: 16px;
+   color: white;
+   padding: 14px 16px;
+   text-decoration: none;
+}
+</style>
+</head>
+<body>
+<nav>
+<a class="links">Covid-19 DashBoard</a>
+<a class="links" routerLink="/Dashboard"  >Home</a>
+<a class="links" href="#">Contact</a>
+<a class="links" href="#">About Us</a>
+<a class="links" href="#">More Info</a>
+<div class="subnav">
+<button class="sub-btn">Services></button>
+<div class="sub-content">
+<a class="links" href="#">HealtCare</a>
+<a class="links" href="#">Precautions</a>
+<a class="links" href="#">Medication</a>
+<a class="links" href="#">Test-Centers</a>
+</div>
+</div>
+<a   class="right" routerLink="/Logout">LogOut</a>
+</nav>
+</body>
+</html>
